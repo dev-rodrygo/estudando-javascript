@@ -9,30 +9,21 @@ class Pessoa {
     return this.peso / this.altura ** 2
   }
 
-  classificarImc() {
+  classificarIMC() {
     const imcResultado = this.calcularIMC()
 
-    const tabelaDeImc = [
-      'Abaixo do normal',
-      'Normal',
-      'Sobrepeso',
-      'Obesidade grau I',
-      'Obesidade grau II',
-      'Obesidade grau III',
-    ]
-
     if (imcResultado < 18.6) {
-      return tabelaDeImc[0]
+      return 'Abaixo do normal'
     } else if (imcResultado > 18 && imcResultado < 25) {
-      return tabelaDeImc[1]
+      return 'Normal'
     } else if (imcResultado > 24.9 && imcResultado < 30) {
-      return tabelaDeImc[2]
+      return 'Sobrepeso'
     } else if (imcResultado > 29.9 && imcResultado < 35) {
-      return tabelaDeImc[3]
+      return 'Obesidade grau I'
     } else if (imcResultado > 34.9 && imcResultado < 40) {
-      return tabelaDeImc[4]
+      return 'Obesidade grau II'
     } else {
-      return tabelaDeImc[5]
+      return 'Obesidade grau III'
     }
   }
 }
@@ -40,12 +31,9 @@ class Pessoa {
 const rodry = new Pessoa('Rodry', 64, 1.82)
 const jose = new Pessoa('josé', 140, 1.85)
 
-console.log(rodry)
-console.log(`Seu IMC:`, rodry.calcularIMC().toFixed(2))
-console.log(`Nivel de IMC:`, rodry.classificarImc())
-
-console.log()
-
-console.log(jose)
-console.log(`Seu IMC:`, jose.calcularIMC().toFixed(2))
-console.log(`Nivel de IMC:`, jose.classificarImc())
+console.log(
+  `${rodry.nome} - Seu IMC: ${rodry.calcularIMC().toFixed(2)} - Classificação: ${rodry.classificarIMC()} `,
+)
+console.log(
+  `${jose.nome} - Seu IMC: ${jose.calcularIMC().toFixed(2)} - Classificação: ${jose.classificarIMC()} `,
+)
