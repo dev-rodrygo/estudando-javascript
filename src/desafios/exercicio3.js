@@ -1,8 +1,7 @@
-
 // 3) Faça um programa que calcule e imprima o salário salário a ser transferido para um funcionário.
 // Para realizar o calculo receba o valor bruto do salário e o adicional dos benefícios.
-// O salário salário a ser transferido é calculado da seguinte maneira: 
-   
+// O salário salário a ser transferido é calculado da seguinte maneira:
+
 //    valor bruto do salário - percentual de imposto mediante a faixa salarial + adicional dos benefícios
 
 // Para calcular o percentual de imposto segue as aliquotas:
@@ -19,4 +18,27 @@
 //         Saída:
 //             2050.00
 
-const { gets, print } = require('./funcoes-auxiliares-ex3');
+import { gets, print } from './funcoes-auxiliares-ex3.js'
+
+const salario = gets()
+const beneficios = gets()
+
+function calcularImposto(salario) {
+  if (salario > 0 && salario <= 1100) {
+    return salario * 0.05
+  } else if (salario > 1100 && salario <= 2500) {
+    return salario * 0.1
+  } else {
+    return salario * 0.15
+  }
+}
+
+function calcularSalario(salario, beneficios) {
+  const imposto = calcularImposto(salario)
+  return salario - imposto + beneficios
+}
+
+const valorSalario = calcularSalario(salario, beneficios)
+
+print(valorSalario.toFixed(2))
+//print(`Salário: ${calcularSalario(salario, beneficios).toFixed(2)}`)

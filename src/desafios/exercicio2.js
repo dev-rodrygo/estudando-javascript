@@ -1,17 +1,27 @@
-// 2) Faça um programa que receba N (quantidade de números) e seus respectivos valores.
-// Imprima o maior número par e o menor número impar.
+import { gets, print } from './funcoes-auxiliares-ex2.js'
 
-//     Exemplo:
-//         Entrada:
-//             5
-//             3
-//             4
-//             1
-//             10
-//             8
+const numerosSorteados = gets()
+let maiorNumeroPar = -Infinity
+let menorNumeroImpar = Infinity
 
-//         Saída:
-//             Maior número par: 10
-//             Menor número impar: 1
+for (let i = 0; i < numerosSorteados; i++) {
+  const numeroRegistrado = gets()
 
-//const { gets, print } = require('./funcoes-auxiliares-ex2');
+  if (numeroRegistrado % 2 === 0 && numeroRegistrado > maiorNumeroPar) {
+    maiorNumeroPar = numeroRegistrado
+  } else if (numeroRegistrado % 2 != 0 && numeroRegistrado < menorNumeroImpar) {
+    menorNumeroImpar = numeroRegistrado
+  }
+}
+
+print(
+  maiorNumeroPar === -Infinity
+    ? 'Nenhum número par!'
+    : `Maior número par: ${maiorNumeroPar}`,
+)
+
+print(
+  menorNumeroImpar === Infinity
+    ? 'Nenhum numero impar!'
+    : `Menor numero impar: ${menorNumeroImpar}`,
+)
