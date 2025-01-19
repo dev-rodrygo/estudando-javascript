@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calcular valor do jantar por cliente</title>
+  </head>
+  <body>
+    <script>
+      const valorDaJantar = Number(prompt('Valor do jantar:'))
+      const numerosDeClientes = Number(prompt('Numeros de Clientes:'))
+      const valorPorCliente = valorDaJantar / numerosDeClientes
+
+      alert(
+        `Valor da Conta R$: ${valorDaJantar.toFixed(2)}\nNumero de clientes: ${numerosDeClientes}\nValor por clientes R$: ${valorPorCliente}`,
+      )
+    </script>
+  </body>
+</html>
