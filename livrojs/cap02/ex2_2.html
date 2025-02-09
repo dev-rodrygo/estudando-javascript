@@ -1,29 +1,32 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vídeo Locadora</title>
-  </head>
-  <body>
-    <h1>Cine JS: Filmes em Cartaz</h1>
-    <form>
-      <p>
-        Título do Filme:
-        <input type="text" id="inTitulo" required />
-      </p>
-      <p>
-        Duração (min):
-        <input type="number" id="inDuracao" required min="1" />
-      </p>
 
-      <input type="submit" value="Converter para Horas e Minutos" />
-      <button id="inBotao">Limpar</button>
-    </form>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vídeo Locadora</title>
+</head>
 
-    <h3 id="outResp1"></h3>
-    <h4 id="outResp2"></h4>
+<body>
+  <h1>Cine JS: Filmes em Cartaz</h1>
+  <form>
+    <p>
+      Título do Filme:
+      <input type="text" id="inTitulo" required />
+    </p>
+    <p>
+      Duração (min):
+      <input type="number" id="inDuracao" required min="1" />
+    </p>
 
-    <script src="./js/ex2_2.js"></script>
-  </body>
+    <input type="submit" value="Converter para Horas e Minutos" />
+    <button id="inBotao">Limpar</button>
+  </form>
+
+  <h3 id="outResp1"></h3>
+  <h4 id="outResp2"></h4>
+
+  <script src="./js/ex2_2.js"></script>
+</body>
+
 </html>
