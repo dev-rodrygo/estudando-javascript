@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "teste-eslint",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "teste.js",
   "scripts": {
