@@ -1,0 +1,119 @@
+/* Reset básico para remover margens e preenchimentos padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo global do corpo da página */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  display: flex;
+  flex-direction: column; /* Altera para coluna para centralizar verticalmente */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Container principal */
+form {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Estilo do título */
+h1 {
+  text-align: center;
+  color: #4a90e2;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  width: 100%; /* Garante que o h1 ocupe toda a largura */
+}
+
+/* Estilo dos parágrafos e labels */
+p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Estilo dos inputs */
+input[type='text'],
+input[type='number'] {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+input[type='text']:focus,
+input[type='number']:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+/* Estilo do botão de submit */
+input[type='submit'] {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type='submit']:hover {
+  background-color: #357abd;
+}
+
+/* Estilo do botão de limpar */
+button#inBotao {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+  max-width: 400px; /* Define a mesma largura máxima do form */
+}
+
+button#inBotao:hover {
+  background-color: #c0392b;
+}
+
+/* Estilo dos elementos h2 e h3 */
+h2,
+h3 {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #333;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #4a90e2;
+}
+
+h3 {
+  font-size: 1.25rem;
+  color: #555;
+}
