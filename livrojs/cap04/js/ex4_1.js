@@ -11,15 +11,14 @@ frm.addEventListener('submit', (e) => {
   const nota2 = Number(frm.inNota2.value)
   const media = (nota1 + nota2) / 2
 
-  console.log('Media: ', media)
   resp1.innerText = `Média das Notas: ${media.toFixed(2)}`
 
   if (media > 6.99 && media < 10) {
     resp2.innerText = `${nomeAluno} Parabéns Você Foi Aprovado(a)!`
-    resp2.style.color = 'Navy blue'
+    resp2.style.color = 'navy'
   } else if (media == 10) {
-    resp2.innerText = `Parabéns ${nomeAluno} Você Foi Aprovado(a) com Nota Maxima!`
-    resp2.style.color = 'Navy blue'
+    resp2.innerText = `Parabéns ${nomeAluno} Você Foi Aprovado(a) com Nota Máxima!`
+    resp2.style.color = 'turquoise'
   } else {
     resp2.innerText = `Ops..${nomeAluno} Você Foi Reprovado(a)!`
     resp2.style.color = 'red'
@@ -29,12 +28,15 @@ frm.addEventListener('submit', (e) => {
 botao.addEventListener('click', (e) => {
   e.preventDefault()
 
-  {
-    resp1.innerText = ''
-    resp2.innerText = ''
+  // Limpa os textos de resposta
+  resp1.innerText = ''
+  resp2.innerText = ''
 
-    frm.inNomeAluno.value = ''
-    frm.inNota1.value = ''
-    frm.inNota2.value = ''
-  }
+  // Reseta a cor do h3
+  resp2.style.color = ''
+
+  // Limpa os campos de entrada
+  frm.inNomeAluno.value = ''
+  frm.inNota1.value = ''
+  frm.inNota2.value = ''
 })
