@@ -1,18 +1,7 @@
-const frutas = ['maçã', 'banana', 'laranja']
+const array1 = [1, 4, 9, 16]
 
-// Usando for
-for (let i = 0; i < frutas.length; i++) {
-  console.log(frutas[i])
-}
-console.log()
+// Pass a function to map
+const map1 = array1.map((x) => x * 10)
 
-// Usando for...of
-for (const fruta of frutas) {
-  console.log(fruta)
-}
-console.log()
-
-// Usando forEach
-frutas.forEach((fruta, index) => {
-  console.log(`${index}: ${fruta}`)
-})
+console.log(map1)
+// Expected output: Array [2, 8, 18, 32]
