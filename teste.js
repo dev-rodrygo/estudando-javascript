@@ -5,3 +5,5 @@ const map1 = array1.map((x) => x * 10)
 
 console.log(map1)
 // Expected output: Array [2, 8, 18, 32]
+
+array1.forEach((x) => console.log(x))
